@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TraductorSistema
 {
-    public partial class Form1 : Form
+    public partial class SignsTranslator : Form
     {
-        public Form1()
+        public SignsTranslator()
         {
             InitializeComponent();
         }

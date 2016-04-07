@@ -92,6 +92,7 @@
             this.Controls.Add(this.Salir);
             this.Controls.Add(this.Limpiar);
             this.Controls.Add(this.Regresar);
+            this.MaximizeBox = false;
             this.Name = "Traductor_señas";
             this.Text = "Traductor_señas";
             this.ResumeLayout(false);

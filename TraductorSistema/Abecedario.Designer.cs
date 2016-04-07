@@ -415,6 +415,7 @@
             this.Controls.Add(this.C);
             this.Controls.Add(this.B);
             this.Controls.Add(this.A);
+            this.MaximizeBox = false;
             this.Name = "Abecedario";
             this.Text = "Abecedario";
             this.Load += new System.EventHandler(this.Abecedario_Load);

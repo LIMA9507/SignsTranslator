@@ -29,7 +29,7 @@ namespace TraductorSistema
 
         private void Limpiar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
         }
     }
 }
