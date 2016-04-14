@@ -30,8 +30,7 @@ namespace TraductorSistema
 
         private void Regresar_Click(object sender, EventArgs e)
         {
-            Abecedario abfrm = new Abecedario();
-            abfrm.ShowDialog();
+            this.Close();
 
         }
     }

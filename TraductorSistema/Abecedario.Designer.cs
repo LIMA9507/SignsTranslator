@@ -64,9 +64,9 @@
             // 
             this.Z.BackgroundImage = global::TraductorSistema.Properties.Resources.Z;
             this.Z.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Z.Location = new System.Drawing.Point(827, 248);
+            this.Z.Location = new System.Drawing.Point(827, 246);
             this.Z.Name = "Z";
-            this.Z.Size = new System.Drawing.Size(51, 66);
+            this.Z.Size = new System.Drawing.Size(58, 66);
             this.Z.TabIndex = 55;
             this.Z.UseVisualStyleBackColor = true;
             this.Z.Click += new System.EventHandler(this.Z_Click);
@@ -86,7 +86,7 @@
             // 
             this.X.BackgroundImage = global::TraductorSistema.Properties.Resources.X;
             this.X.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.X.Location = new System.Drawing.Point(651, 248);
+            this.X.Location = new System.Drawing.Point(651, 241);
             this.X.Name = "X";
             this.X.Size = new System.Drawing.Size(51, 66);
             this.X.TabIndex = 53;
@@ -141,7 +141,7 @@
             // 
             this.S.BackgroundImage = global::TraductorSistema.Properties.Resources.S;
             this.S.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.S.Location = new System.Drawing.Point(147, 248);
+            this.S.Location = new System.Drawing.Point(147, 243);
             this.S.Name = "S";
             this.S.Size = new System.Drawing.Size(51, 66);
             this.S.TabIndex = 48;
@@ -152,7 +152,7 @@
             // 
             this.R.BackgroundImage = global::TraductorSistema.Properties.Resources.R;
             this.R.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.R.Location = new System.Drawing.Point(48, 255);
+            this.R.Location = new System.Drawing.Point(48, 248);
             this.R.Name = "R";
             this.R.Size = new System.Drawing.Size(51, 66);
             this.R.TabIndex = 47;
@@ -165,7 +165,7 @@
             this.Q.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Q.Location = new System.Drawing.Point(827, 176);
             this.Q.Name = "Q";
-            this.Q.Size = new System.Drawing.Size(51, 66);
+            this.Q.Size = new System.Drawing.Size(58, 66);
             this.Q.TabIndex = 46;
             this.Q.UseVisualStyleBackColor = true;
             this.Q.Click += new System.EventHandler(this.Q_Click);
@@ -174,7 +174,7 @@
             // 
             this.P.BackgroundImage = global::TraductorSistema.Properties.Resources.P;
             this.P.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.P.Location = new System.Drawing.Point(735, 167);
+            this.P.Location = new System.Drawing.Point(734, 167);
             this.P.Name = "P";
             this.P.Size = new System.Drawing.Size(51, 66);
             this.P.TabIndex = 45;
@@ -196,7 +196,7 @@
             // 
             this.Ñ.BackgroundImage = global::TraductorSistema.Properties.Resources.Ñ;
             this.Ñ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Ñ.Location = new System.Drawing.Point(534, 166);
+            this.Ñ.Location = new System.Drawing.Point(527, 167);
             this.Ñ.Name = "Ñ";
             this.Ñ.Size = new System.Drawing.Size(51, 66);
             this.Ñ.TabIndex = 43;
@@ -251,7 +251,7 @@
             // 
             this.J.BackgroundImage = global::TraductorSistema.Properties.Resources.J;
             this.J.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.J.Location = new System.Drawing.Point(34, 183);
+            this.J.Location = new System.Drawing.Point(26, 176);
             this.J.Name = "J";
             this.J.Size = new System.Drawing.Size(51, 66);
             this.J.TabIndex = 38;
@@ -262,7 +262,7 @@
             // 
             this.I.BackgroundImage = global::TraductorSistema.Properties.Resources.I;
             this.I.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.I.Location = new System.Drawing.Point(827, 95);
+            this.I.Location = new System.Drawing.Point(818, 94);
             this.I.Name = "I";
             this.I.Size = new System.Drawing.Size(51, 66);
             this.I.TabIndex = 37;
@@ -284,7 +284,7 @@
             // 
             this.G.BackgroundImage = global::TraductorSistema.Properties.Resources.G;
             this.G.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.G.Location = new System.Drawing.Point(622, 86);
+            this.G.Location = new System.Drawing.Point(621, 97);
             this.G.Name = "G";
             this.G.Size = new System.Drawing.Size(51, 66);
             this.G.TabIndex = 35;
@@ -295,7 +295,7 @@
             // 
             this.F.BackgroundImage = global::TraductorSistema.Properties.Resources.F;
             this.F.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.F.Location = new System.Drawing.Point(525, 86);
+            this.F.Location = new System.Drawing.Point(518, 94);
             this.F.Name = "F";
             this.F.Size = new System.Drawing.Size(51, 66);
             this.F.TabIndex = 34;
@@ -352,7 +352,7 @@
             this.A.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.A.Location = new System.Drawing.Point(12, 95);
             this.A.Name = "A";
-            this.A.Size = new System.Drawing.Size(51, 66);
+            this.A.Size = new System.Drawing.Size(56, 66);
             this.A.TabIndex = 29;
             this.A.UseVisualStyleBackColor = true;
             this.A.Click += new System.EventHandler(this.A_Click);
@@ -415,6 +415,7 @@
             this.Controls.Add(this.C);
             this.Controls.Add(this.B);
             this.Controls.Add(this.A);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Abecedario";
             this.Text = "Abecedario";

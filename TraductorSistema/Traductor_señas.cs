@@ -24,12 +24,12 @@ namespace TraductorSistema
 
         private void Regresar_Click(object sender, EventArgs e)
         {
-            this.Close ();
+            
         }
 
         private void Limpiar_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
         }
     }
 }

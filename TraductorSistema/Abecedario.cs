@@ -27,1274 +27,223 @@ namespace TraductorSistema
         {
             SqlConnectionStringBuilder cs = new SqlConnectionStringBuilder();
 
-            cs.DataSource = @"CRISTIANPC";
-            cs.InitialCatalog = "Abecedario";
+            cs.DataSource = @"AlbertoMexia-PC";
+            cs.InitialCatalog = "Traductor";
             cs.IntegratedSecurity = true;
 
 
 
             con = new SqlConnection(cs.ConnectionString);
         }
+        public void asignacionLetra(char var)
+        {
+            {
+                
+                string qry = "select RUTA from Señas where descripcion='"+ var + "' and Tipo=1";
+                try
+                {
+                    // Inicializa el objeto SqlCommand
+                    SqlCommand SqlCom = new SqlCommand(qry, con);
+
+
+                    // Abre la conexión y ejecutar el query
+                    con.Open();
+                    SqlDataReader rdr = SqlCom.ExecuteReader();
+
+                    if (rdr.Read())
+                    {
+                        // Obtiene los resultados de la búsqueda
+                        string text;
+
+                        text = rdr.GetString(0);
+
+
+                        Abecedario_Resultado FrmObjR = new Abecedario_Resultado();
+                        FrmObjR.PictureBox1.Image = Image.FromFile(rdr.GetString(0));
+                        FrmObjR.ShowDialog();
+
+                        text = string.Empty;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("No existe registro con la " + var, "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    // Cerrar la conexión si esta se encuentra abierta
+                    if (con.State == ConnectionState.Open)
+                        con.Close();
+                }
+            }
+        }
 
         private void A_Click(object sender, EventArgs e)
         {
-            string qry = "select RUTA from Señas where descripcion='a' and Tipo=1";
-            try
-            {
-                // Inicializa el objeto SqlCommand
-                SqlCommand SqlCom = new SqlCommand(qry, con);
-
-
-                // Abre la conexión y ejecutar el query
-                con.Open();
-                SqlDataReader rdr = SqlCom.ExecuteReader();
-
-                if (rdr.Read())
-                {
-                    // Obtiene los resultados de la búsqueda
-                    string text;
-
-                    text = rdr.GetString(0);
-                   
-
-                    Abecedario_Resultado FrmObjR= new Abecedario_Resultado();
-                    FrmObjR.PictureBox1.Image=Image.FromFile(rdr.GetString(0));
-                    FrmObjR.ShowDialog();
-
-                    text = string.Empty;
-                   
-                }
-                else
-                {
-                    MessageBox.Show("No existe registro con la A", "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                // Cerrar la conexión si esta se encuentra abierta
-                if (con.State == ConnectionState.Open)
-                    con.Close();
-            }
+            char var = 'A';
+            asignacionLetra(var);
         }
 
         private void B_Click(object sender, EventArgs e)
         {
-            string qry = "select RUTA from Señas where descripcion='b' and Tipo=1";
-            try
-            {
-                // Inicializa el objeto SqlCommand
-                SqlCommand SqlCom = new SqlCommand(qry, con);
-
-
-                // Abre la conexión y ejecutar el query
-                con.Open();
-                SqlDataReader rdr = SqlCom.ExecuteReader();
-
-                if (rdr.Read())
-                {
-                    // Obtiene los resultados de la búsqueda
-                    string text;
-
-                    text = rdr.GetString(0);
-                   
-
-                    Abecedario_Resultado FrmObjR= new Abecedario_Resultado();
-                    FrmObjR.PictureBox1.Image=Image.FromFile(rdr.GetString(0));
-                    FrmObjR.ShowDialog();
-
-                    text = string.Empty;
-                   
-                }
-                else
-                {
-                    MessageBox.Show("No existe registro con la B", "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                // Cerrar la conexión si esta se encuentra abierta
-                if (con.State == ConnectionState.Open)
-                    con.Close();
-            }
-        }
-
-        private void P_Click(object sender, EventArgs e)
-        {
-            {
-                string qry = "select RUTA from Señas where descripcion='p' and Tipo=1";
-                try
-                {
-                    // Inicializa el objeto SqlCommand
-                    SqlCommand SqlCom = new SqlCommand(qry, con);
-
-
-                    // Abre la conexión y ejecutar el query
-                    con.Open();
-                    SqlDataReader rdr = SqlCom.ExecuteReader();
-
-                    if (rdr.Read())
-                    {
-                        // Obtiene los resultados de la búsqueda
-                        string text;
-
-                        text = rdr.GetString(0);
-
-
-                        Abecedario_Resultado FrmObjR = new Abecedario_Resultado();
-                        FrmObjR.PictureBox1.Image = Image.FromFile(rdr.GetString(0));
-                        FrmObjR.ShowDialog();
-
-                        text = string.Empty;
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("No existe registro con la P", "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    // Cerrar la conexión si esta se encuentra abierta
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
-            }
+            char var = 'B';
+            asignacionLetra(var);
         }
 
         private void C_Click(object sender, EventArgs e)
         {
-            string qry = "select RUTA from Señas where descripcion='c' and Tipo=1";
-            try
-            {
-                // Inicializa el objeto SqlCommand
-                SqlCommand SqlCom = new SqlCommand(qry, con);
-
-
-                // Abre la conexión y ejecutar el query
-                con.Open();
-                SqlDataReader rdr = SqlCom.ExecuteReader();
-
-                if (rdr.Read())
-                {
-                    // Obtiene los resultados de la búsqueda
-                    string text;
-
-                    text = rdr.GetString(0);
-                   
-
-                    Abecedario_Resultado FrmObjR= new Abecedario_Resultado();
-                    FrmObjR.PictureBox1.Image=Image.FromFile(rdr.GetString(0));
-                    FrmObjR.ShowDialog();
-
-                    text = string.Empty;
-                   
-                }
-                else
-                {
-                    MessageBox.Show("No existe registro con la C", "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                // Cerrar la conexión si esta se encuentra abierta
-                if (con.State == ConnectionState.Open)
-                    con.Close();
-            }
+            char var = 'C';
+            asignacionLetra(var);
         }
 
         private void D_Click(object sender, EventArgs e)
         {
-            string qry = "select RUTA from Señas where descripcion='d' and Tipo=1";
-            try
-            {
-                // Inicializa el objeto SqlCommand
-                SqlCommand SqlCom = new SqlCommand(qry, con);
-
-
-                // Abre la conexión y ejecutar el query
-                con.Open();
-                SqlDataReader rdr = SqlCom.ExecuteReader();
-
-                if (rdr.Read())
-                {
-                    // Obtiene los resultados de la búsqueda
-                    string text;
-
-                    text = rdr.GetString(0);
-
-
-                    Abecedario_Resultado FrmObjR = new Abecedario_Resultado();
-                    FrmObjR.PictureBox1.Image = Image.FromFile(rdr.GetString(0));
-                    FrmObjR.ShowDialog();
-
-                    text = string.Empty;
-
-                }
-                else
-                {
-                    MessageBox.Show("No existe registro con la D", "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                // Cerrar la conexión si esta se encuentra abierta
-                if (con.State == ConnectionState.Open)
-                    con.Close();
-            }
+                char var = 'D';
+                asignacionLetra(var);   
         }
 
         private void E_Click(object sender, EventArgs e)
         {
-            {
-                string qry = "select RUTA from Señas where descripcion='e' and Tipo=1";
-                try
-                {
-                    // Inicializa el objeto SqlCommand
-                    SqlCommand SqlCom = new SqlCommand(qry, con);
-
-
-                    // Abre la conexión y ejecutar el query
-                    con.Open();
-                    SqlDataReader rdr = SqlCom.ExecuteReader();
-
-                    if (rdr.Read())
-                    {
-                        // Obtiene los resultados de la búsqueda
-                        string text;
-
-                        text = rdr.GetString(0);
-
-
-                        Abecedario_Resultado FrmObjR = new Abecedario_Resultado();
-                        FrmObjR.PictureBox1.Image = Image.FromFile(rdr.GetString(0));
-                        FrmObjR.ShowDialog();
-
-                        text = string.Empty;
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("No existe registro con la E", "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    // Cerrar la conexión si esta se encuentra abierta
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
-            }
+            char var = 'E';
+            asignacionLetra(var);
         }
 
         private void F_Click(object sender, EventArgs e)
-        {
             {
-                string qry = "select RUTA from Señas where descripcion='f' and Tipo=1";
-                try
-                {
-                    // Inicializa el objeto SqlCommand
-                    SqlCommand SqlCom = new SqlCommand(qry, con);
-
-
-                    // Abre la conexión y ejecutar el query
-                    con.Open();
-                    SqlDataReader rdr = SqlCom.ExecuteReader();
-
-                    if (rdr.Read())
-                    {
-                        // Obtiene los resultados de la búsqueda
-                        string text;
-
-                        text = rdr.GetString(0);
-
-
-                        Abecedario_Resultado FrmObjR = new Abecedario_Resultado();
-                        FrmObjR.PictureBox1.Image = Image.FromFile(rdr.GetString(0));
-                        FrmObjR.ShowDialog();
-
-                        text = string.Empty;
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("No existe registro con la F", "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    // Cerrar la conexión si esta se encuentra abierta
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
+                char var = 'F';
+                asignacionLetra(var);
             }
-        }
-
+        
         private void G_Click(object sender, EventArgs e)
         {
-            {
-                string qry = "select RUTA from Señas where descripcion='G' and Tipo=1";
-                try
-                {
-                    // Inicializa el objeto SqlCommand
-                    SqlCommand SqlCom = new SqlCommand(qry, con);
-
-
-                    // Abre la conexión y ejecutar el query
-                    con.Open();
-                    SqlDataReader rdr = SqlCom.ExecuteReader();
-
-                    if (rdr.Read())
-                    {
-                        // Obtiene los resultados de la búsqueda
-                        string text;
-
-                        text = rdr.GetString(0);
-
-
-                        Abecedario_Resultado FrmObjR = new Abecedario_Resultado();
-                        FrmObjR.PictureBox1.Image = Image.FromFile(rdr.GetString(0));
-                        FrmObjR.ShowDialog();
-
-                        text = string.Empty;
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("No existe registro con la G", "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    // Cerrar la conexión si esta se encuentra abierta
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
-            }
+            char var = 'G';
+            asignacionLetra(var);
         }
 
         private void H_Click(object sender, EventArgs e)
         {
-            {
-                string qry = "select RUTA from Señas where descripcion='h' and Tipo=1";
-                try
-                {
-                    // Inicializa el objeto SqlCommand
-                    SqlCommand SqlCom = new SqlCommand(qry, con);
-
-
-                    // Abre la conexión y ejecutar el query
-                    con.Open();
-                    SqlDataReader rdr = SqlCom.ExecuteReader();
-
-                    if (rdr.Read())
-                    {
-                        // Obtiene los resultados de la búsqueda
-                        string text;
-
-                        text = rdr.GetString(0);
-
-
-                        Abecedario_Resultado FrmObjR = new Abecedario_Resultado();
-                        FrmObjR.PictureBox1.Image = Image.FromFile(rdr.GetString(0));
-                        FrmObjR.ShowDialog();
-
-                        text = string.Empty;
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("No existe registro con la H", "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    // Cerrar la conexión si esta se encuentra abierta
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
-            }
+            char var = 'H';
+            asignacionLetra(var);
         }
 
         private void I_Click(object sender, EventArgs e)
         {
-            {
-                string qry = "select RUTA from Señas where descripcion='i' and Tipo=1";
-                try
-                {
-                    // Inicializa el objeto SqlCommand
-                    SqlCommand SqlCom = new SqlCommand(qry, con);
-
-
-                    // Abre la conexión y ejecutar el query
-                    con.Open();
-                    SqlDataReader rdr = SqlCom.ExecuteReader();
-
-                    if (rdr.Read())
-                    {
-                        // Obtiene los resultados de la búsqueda
-                        string text;
-
-                        text = rdr.GetString(0);
-
-
-                        Abecedario_Resultado FrmObjR = new Abecedario_Resultado();
-                        FrmObjR.PictureBox1.Image = Image.FromFile(rdr.GetString(0));
-                        FrmObjR.ShowDialog();
-
-                        text = string.Empty;
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("No existe registro con la I", "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    // Cerrar la conexión si esta se encuentra abierta
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
-            }
+            char var = 'I';
+            asignacionLetra(var);
         }
 
         private void J_Click(object sender, EventArgs e)
         {
-            {
-                string qry = "select RUTA from Señas where descripcion='j' and Tipo=1";
-                try
-                {
-                    // Inicializa el objeto SqlCommand
-                    SqlCommand SqlCom = new SqlCommand(qry, con);
-
-
-                    // Abre la conexión y ejecutar el query
-                    con.Open();
-                    SqlDataReader rdr = SqlCom.ExecuteReader();
-
-                    if (rdr.Read())
-                    {
-                        // Obtiene los resultados de la búsqueda
-                        string text;
-
-                        text = rdr.GetString(0);
-
-
-                        Abecedario_Resultado FrmObjR = new Abecedario_Resultado();
-                        FrmObjR.PictureBox1.Image = Image.FromFile(rdr.GetString(0));
-                        FrmObjR.ShowDialog();
-
-                        text = string.Empty;
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("No existe registro con la J", "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    // Cerrar la conexión si esta se encuentra abierta
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
-            }
+            char var = 'J';
+            asignacionLetra(var);
         }
 
         private void K_Click(object sender, EventArgs e)
         {
-            {
-                string qry = "select RUTA from Señas where descripcion='k' and Tipo=1";
-                try
-                {
-                    // Inicializa el objeto SqlCommand
-                    SqlCommand SqlCom = new SqlCommand(qry, con);
-
-
-                    // Abre la conexión y ejecutar el query
-                    con.Open();
-                    SqlDataReader rdr = SqlCom.ExecuteReader();
-
-                    if (rdr.Read())
-                    {
-                        // Obtiene los resultados de la búsqueda
-                        string text;
-
-                        text = rdr.GetString(0);
-
-
-                        Abecedario_Resultado FrmObjR = new Abecedario_Resultado();
-                        FrmObjR.PictureBox1.Image = Image.FromFile(rdr.GetString(0));
-                        FrmObjR.ShowDialog();
-
-                        text = string.Empty;
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("No existe registro con la K", "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    // Cerrar la conexión si esta se encuentra abierta
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
-            }
+            char var = 'K';
+            asignacionLetra(var);
         }
+       
 
         private void L_Click(object sender, EventArgs e)
         {
-            {
-                string qry = "select RUTA from Señas where descripcion='l' and Tipo=1";
-                try
-                {
-                    // Inicializa el objeto SqlCommand
-                    SqlCommand SqlCom = new SqlCommand(qry, con);
-
-
-                    // Abre la conexión y ejecutar el query
-                    con.Open();
-                    SqlDataReader rdr = SqlCom.ExecuteReader();
-
-                    if (rdr.Read())
-                    {
-                        // Obtiene los resultados de la búsqueda
-                        string text;
-
-                        text = rdr.GetString(0);
-
-
-                        Abecedario_Resultado FrmObjR = new Abecedario_Resultado();
-                        FrmObjR.PictureBox1.Image = Image.FromFile(rdr.GetString(0));
-                        FrmObjR.ShowDialog();
-
-                        text = string.Empty;
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("No existe registro con la L", "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    // Cerrar la conexión si esta se encuentra abierta
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
-            }
+            char var = 'L';
+            asignacionLetra(var);
         }
 
         private void U_Click(object sender, EventArgs e)
         {
-            {
-                string qry = "select RUTA from Señas where descripcion='m' and Tipo=1";
-                try
-                {
-                    // Inicializa el objeto SqlCommand
-                    SqlCommand SqlCom = new SqlCommand(qry, con);
-
-
-                    // Abre la conexión y ejecutar el query
-                    con.Open();
-                    SqlDataReader rdr = SqlCom.ExecuteReader();
-
-                    if (rdr.Read())
-                    {
-                        // Obtiene los resultados de la búsqueda
-                        string text;
-
-                        text = rdr.GetString(0);
-
-
-                        Abecedario_Resultado FrmObjR = new Abecedario_Resultado();
-                        FrmObjR.PictureBox1.Image = Image.FromFile(rdr.GetString(0));
-                        FrmObjR.ShowDialog();
-
-                        text = string.Empty;
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("No existe registro con la M", "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    // Cerrar la conexión si esta se encuentra abierta
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
-            }
+            char var = 'M';
+            asignacionLetra(var);
         }
 
         private void N_Click(object sender, EventArgs e)
         {
-            {
-                string qry = "select RUTA from Señas where descripcion='n' and Tipo=1";
-                try
-                {
-                    // Inicializa el objeto SqlCommand
-                    SqlCommand SqlCom = new SqlCommand(qry, con);
-
-
-                    // Abre la conexión y ejecutar el query
-                    con.Open();
-                    SqlDataReader rdr = SqlCom.ExecuteReader();
-
-                    if (rdr.Read())
-                    {
-                        // Obtiene los resultados de la búsqueda
-                        string text;
-
-                        text = rdr.GetString(0);
-
-
-                        Abecedario_Resultado FrmObjR = new Abecedario_Resultado();
-                        FrmObjR.PictureBox1.Image = Image.FromFile(rdr.GetString(0));
-                        FrmObjR.ShowDialog();
-
-                        text = string.Empty;
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("No existe registro con la N", "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    // Cerrar la conexión si esta se encuentra abierta
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
-            }
+            char var = 'N';
+            asignacionLetra(var);
         }
 
         private void Ñ_Click(object sender, EventArgs e)
         {
-            {
-                string qry = "select RUTA from Señas where descripcion='ñ' and Tipo=1";
-                try
-                {
-                    // Inicializa el objeto SqlCommand
-                    SqlCommand SqlCom = new SqlCommand(qry, con);
-
-
-                    // Abre la conexión y ejecutar el query
-                    con.Open();
-                    SqlDataReader rdr = SqlCom.ExecuteReader();
-
-                    if (rdr.Read())
-                    {
-                        // Obtiene los resultados de la búsqueda
-                        string text;
-
-                        text = rdr.GetString(0);
-
-
-                        Abecedario_Resultado FrmObjR = new Abecedario_Resultado();
-                        FrmObjR.PictureBox1.Image = Image.FromFile(rdr.GetString(0));
-                        FrmObjR.ShowDialog();
-
-                        text = string.Empty;
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("No existe registro con la Ñ", "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    // Cerrar la conexión si esta se encuentra abierta
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
-            }
+            char var = 'Ñ';
+            asignacionLetra(var);
         }
 
         private void O_Click(object sender, EventArgs e)
         {
-            {
-                string qry = "select RUTA from Señas where descripcion='o' and Tipo=1";
-                try
-                {
-                    // Inicializa el objeto SqlCommand
-                    SqlCommand SqlCom = new SqlCommand(qry, con);
+            char var = 'O';
+            asignacionLetra(var);
+        }
 
-
-                    // Abre la conexión y ejecutar el query
-                    con.Open();
-                    SqlDataReader rdr = SqlCom.ExecuteReader();
-
-                    if (rdr.Read())
-                    {
-                        // Obtiene los resultados de la búsqueda
-                        string text;
-
-                        text = rdr.GetString(0);
-
-
-                        Abecedario_Resultado FrmObjR = new Abecedario_Resultado();
-                        FrmObjR.PictureBox1.Image = Image.FromFile(rdr.GetString(0));
-                        FrmObjR.ShowDialog();
-
-                        text = string.Empty;
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("No existe registro con la O", "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    // Cerrar la conexión si esta se encuentra abierta
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
-            }
+        private void P_Click(object sender, EventArgs e)
+        {
+            char var = 'P';
+            asignacionLetra(var);
         }
 
         private void Q_Click(object sender, EventArgs e)
         {
-            {
-                string qry = "select RUTA from Señas where descripcion='q' and Tipo=1";
-                try
-                {
-                    // Inicializa el objeto SqlCommand
-                    SqlCommand SqlCom = new SqlCommand(qry, con);
-
-
-                    // Abre la conexión y ejecutar el query
-                    con.Open();
-                    SqlDataReader rdr = SqlCom.ExecuteReader();
-
-                    if (rdr.Read())
-                    {
-                        // Obtiene los resultados de la búsqueda
-                        string text;
-
-                        text = rdr.GetString(0);
-
-
-                        Abecedario_Resultado FrmObjR = new Abecedario_Resultado();
-                        FrmObjR.PictureBox1.Image = Image.FromFile(rdr.GetString(0));
-                        FrmObjR.ShowDialog();
-
-                        text = string.Empty;
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("No existe registro con la Q", "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    // Cerrar la conexión si esta se encuentra abierta
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
-            }
+            char var = 'Q';
+            asignacionLetra(var);
         }
 
         private void R_Click(object sender, EventArgs e)
         {
-            {
-                string qry = "select RUTA from Señas where descripcion='r' and Tipo=1";
-                try
-                {
-                    // Inicializa el objeto SqlCommand
-                    SqlCommand SqlCom = new SqlCommand(qry, con);
-
-
-                    // Abre la conexión y ejecutar el query
-                    con.Open();
-                    SqlDataReader rdr = SqlCom.ExecuteReader();
-
-                    if (rdr.Read())
-                    {
-                        // Obtiene los resultados de la búsqueda
-                        string text;
-
-                        text = rdr.GetString(0);
-
-
-                        Abecedario_Resultado FrmObjR = new Abecedario_Resultado();
-                        FrmObjR.PictureBox1.Image = Image.FromFile(rdr.GetString(0));
-                        FrmObjR.ShowDialog();
-
-                        text = string.Empty;
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("No existe registro con la R", "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    // Cerrar la conexión si esta se encuentra abierta
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
-            }
+            char var = 'R';
+            asignacionLetra(var);
         }
 
         private void S_Click(object sender, EventArgs e)
         {
-            {
-                string qry = "select RUTA from Señas where descripcion='s' and Tipo=1";
-                try
-                {
-                    // Inicializa el objeto SqlCommand
-                    SqlCommand SqlCom = new SqlCommand(qry, con);
-
-
-                    // Abre la conexión y ejecutar el query
-                    con.Open();
-                    SqlDataReader rdr = SqlCom.ExecuteReader();
-
-                    if (rdr.Read())
-                    {
-                        // Obtiene los resultados de la búsqueda
-                        string text;
-
-                        text = rdr.GetString(0);
-
-
-                        Abecedario_Resultado FrmObjR = new Abecedario_Resultado();
-                        FrmObjR.PictureBox1.Image = Image.FromFile(rdr.GetString(0));
-                        FrmObjR.ShowDialog();
-
-                        text = string.Empty;
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("No existe registro con la s", "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    // Cerrar la conexión si esta se encuentra abierta
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
-            }
+            char var = 'S';
+            asignacionLetra(var);
         }
 
         private void T_Click(object sender, EventArgs e)
         {
-            {
-                string qry = "select RUTA from Señas where descripcion='t' and Tipo=1";
-                try
-                {
-                    // Inicializa el objeto SqlCommand
-                    SqlCommand SqlCom = new SqlCommand(qry, con);
-
-
-                    // Abre la conexión y ejecutar el query
-                    con.Open();
-                    SqlDataReader rdr = SqlCom.ExecuteReader();
-
-                    if (rdr.Read())
-                    {
-                        // Obtiene los resultados de la búsqueda
-                        string text;
-
-                        text = rdr.GetString(0);
-
-
-                        Abecedario_Resultado FrmObjR = new Abecedario_Resultado();
-                        FrmObjR.PictureBox1.Image = Image.FromFile(rdr.GetString(0));
-                        FrmObjR.ShowDialog();
-
-                        text = string.Empty;
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("No existe registro con la T", "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    // Cerrar la conexión si esta se encuentra abierta
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
-            }
+            char var = 'T';
+            asignacionLetra(var);
         }
 
         private void M_Click(object sender, EventArgs e)
         {
-            {
-                string qry = "select RUTA from Señas where descripcion='u' and Tipo=1";
-                try
-                {
-                    // Inicializa el objeto SqlCommand
-                    SqlCommand SqlCom = new SqlCommand(qry, con);
-
-
-                    // Abre la conexión y ejecutar el query
-                    con.Open();
-                    SqlDataReader rdr = SqlCom.ExecuteReader();
-
-                    if (rdr.Read())
-                    {
-                        // Obtiene los resultados de la búsqueda
-                        string text;
-
-                        text = rdr.GetString(0);
-
-
-                        Abecedario_Resultado FrmObjR = new Abecedario_Resultado();
-                        FrmObjR.PictureBox1.Image = Image.FromFile(rdr.GetString(0));
-                        FrmObjR.ShowDialog();
-
-                        text = string.Empty;
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("No existe registro con la U", "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    // Cerrar la conexión si esta se encuentra abierta
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
-            }
+            char var = 'U';
+            asignacionLetra(var);
         }
 
         private void V_Click(object sender, EventArgs e)
         {
-            {
-                string qry = "select RUTA from Señas where descripcion='v' and Tipo=1";
-                try
-                {
-                    // Inicializa el objeto SqlCommand
-                    SqlCommand SqlCom = new SqlCommand(qry, con);
-
-
-                    // Abre la conexión y ejecutar el query
-                    con.Open();
-                    SqlDataReader rdr = SqlCom.ExecuteReader();
-
-                    if (rdr.Read())
-                    {
-                        // Obtiene los resultados de la búsqueda
-                        string text;
-
-                        text = rdr.GetString(0);
-
-
-                        Abecedario_Resultado FrmObjR = new Abecedario_Resultado();
-                        FrmObjR.PictureBox1.Image = Image.FromFile(rdr.GetString(0));
-                        FrmObjR.ShowDialog();
-
-                        text = string.Empty;
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("No existe registro con la V", "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    // Cerrar la conexión si esta se encuentra abierta
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
-            }
+            char var = 'V';
+            asignacionLetra(var);
         }
 
         private void W_Click(object sender, EventArgs e)
         {
-            {
-                string qry = "select RUTA from Señas where descripcion='w' and Tipo=1";
-                try
-                {
-                    // Inicializa el objeto SqlCommand
-                    SqlCommand SqlCom = new SqlCommand(qry, con);
-
-
-                    // Abre la conexión y ejecutar el query
-                    con.Open();
-                    SqlDataReader rdr = SqlCom.ExecuteReader();
-
-                    if (rdr.Read())
-                    {
-                        // Obtiene los resultados de la búsqueda
-                        string text;
-
-                        text = rdr.GetString(0);
-
-
-                        Abecedario_Resultado FrmObjR = new Abecedario_Resultado();
-                        FrmObjR.PictureBox1.Image = Image.FromFile(rdr.GetString(0));
-                        FrmObjR.ShowDialog();
-
-                        text = string.Empty;
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("No existe registro con la W", "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    // Cerrar la conexión si esta se encuentra abierta
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
-            }
+            char var = 'W';
+            asignacionLetra(var);
         }
 
         private void X_Click(object sender, EventArgs e)
         {
-            {
-                string qry = "select RUTA from Señas where descripcion='x' and Tipo=1";
-                try
-                {
-                    // Inicializa el objeto SqlCommand
-                    SqlCommand SqlCom = new SqlCommand(qry, con);
-
-
-                    // Abre la conexión y ejecutar el query
-                    con.Open();
-                    SqlDataReader rdr = SqlCom.ExecuteReader();
-
-                    if (rdr.Read())
-                    {
-                        // Obtiene los resultados de la búsqueda
-                        string text;
-
-                        text = rdr.GetString(0);
-
-
-                        Abecedario_Resultado FrmObjR = new Abecedario_Resultado();
-                        FrmObjR.PictureBox1.Image = Image.FromFile(rdr.GetString(0));
-                        FrmObjR.ShowDialog();
-
-                        text = string.Empty;
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("No existe registro con la X", "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    // Cerrar la conexión si esta se encuentra abierta
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
-            }
+            char var = 'X';
+            asignacionLetra(var);
         }
 
         private void Y_Click(object sender, EventArgs e)
         {
-            {
-                string qry = "select RUTA from Señas where descripcion='y' and Tipo=1";
-                try
-                {
-                    // Inicializa el objeto SqlCommand
-                    SqlCommand SqlCom = new SqlCommand(qry, con);
-
-
-                    // Abre la conexión y ejecutar el query
-                    con.Open();
-                    SqlDataReader rdr = SqlCom.ExecuteReader();
-
-                    if (rdr.Read())
-                    {
-                        // Obtiene los resultados de la búsqueda
-                        string text;
-
-                        text = rdr.GetString(0);
-
-
-                        Abecedario_Resultado FrmObjR = new Abecedario_Resultado();
-                        FrmObjR.PictureBox1.Image = Image.FromFile(rdr.GetString(0));
-                        FrmObjR.ShowDialog();
-
-                        text = string.Empty;
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("No existe registro con la Y", "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    // Cerrar la conexión si esta se encuentra abierta
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
-            }
+            char var = 'Y';
+            asignacionLetra(var);
         }
 
         private void Z_Click(object sender, EventArgs e)
         {
-            {
-                string qry = "select RUTA from Señas where descripcion='z' and Tipo=1";
-                try
-                {
-                    // Inicializa el objeto SqlCommand
-                    SqlCommand SqlCom = new SqlCommand(qry, con);
-
-
-                    // Abre la conexión y ejecutar el query
-                    con.Open();
-                    SqlDataReader rdr = SqlCom.ExecuteReader();
-
-                    if (rdr.Read())
-                    {
-                        // Obtiene los resultados de la búsqueda
-                        string text;
-
-                        text = rdr.GetString(0);
-
-
-                        Abecedario_Resultado FrmObjR = new Abecedario_Resultado();
-                        FrmObjR.PictureBox1.Image = Image.FromFile(rdr.GetString(0));
-                        FrmObjR.ShowDialog();
-
-                        text = string.Empty;
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("No existe registro con la Z", "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    // Cerrar la conexión si esta se encuentra abierta
-                    if (con.State == ConnectionState.Open)
-                        con.Close();
-                }
-            }
+            char var = 'Z';
+            asignacionLetra(var);
         }
 
         private void Abecedario_Load(object sender, EventArgs e)

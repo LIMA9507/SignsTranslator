@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Abecedario_Resultado));
             this.Regresar = new System.Windows.Forms.Button();
-            this.Salir = new System.Windows.Forms.Button();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -39,23 +38,12 @@
             // 
             this.Regresar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Regresar.BackgroundImage")));
             this.Regresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Regresar.Location = new System.Drawing.Point(676, 398);
+            this.Regresar.Location = new System.Drawing.Point(698, 392);
             this.Regresar.Name = "Regresar";
             this.Regresar.Size = new System.Drawing.Size(109, 34);
             this.Regresar.TabIndex = 3;
             this.Regresar.UseVisualStyleBackColor = true;
             this.Regresar.Click += new System.EventHandler(this.Regresar_Click);
-            // 
-            // Salir
-            // 
-            this.Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Salir.BackgroundImage")));
-            this.Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Salir.Location = new System.Drawing.Point(811, 398);
-            this.Salir.Name = "Salir";
-            this.Salir.Size = new System.Drawing.Size(74, 33);
-            this.Salir.TabIndex = 2;
-            this.Salir.UseVisualStyleBackColor = true;
-            this.Salir.Click += new System.EventHandler(this.Salir_Click);
             // 
             // PictureBox1
             // 
@@ -76,7 +64,6 @@
             this.ClientSize = new System.Drawing.Size(944, 540);
             this.Controls.Add(this.PictureBox1);
             this.Controls.Add(this.Regresar);
-            this.Controls.Add(this.Salir);
             this.Name = "Abecedario_Resultado";
             this.Text = "Abecedario_Resultado";
             this.Load += new System.EventHandler(this.Abecedario_Resultado_Load);
@@ -88,7 +75,6 @@
         #endregion
 
         internal System.Windows.Forms.Button Regresar;
-        internal System.Windows.Forms.Button Salir;
         public System.Windows.Forms.PictureBox PictureBox1;
     }
 }
