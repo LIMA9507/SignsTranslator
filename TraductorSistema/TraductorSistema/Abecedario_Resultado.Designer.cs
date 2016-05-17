@@ -51,9 +51,10 @@
             this.PictureBox1.Location = new System.Drawing.Point(391, 199);
             this.PictureBox1.Name = "PictureBox1";
             this.PictureBox1.Size = new System.Drawing.Size(606, 348);
-            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureBox1.TabIndex = 4;
             this.PictureBox1.TabStop = false;
+            this.PictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
             // Abecedario_Resultado
             // 
@@ -67,7 +68,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Abecedario_Resultado";
-            this.Text = "Abecedario_Resultado";
+            this.Text = "Signs Translator";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Abecedario_Resultado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();

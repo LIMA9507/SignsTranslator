@@ -56,13 +56,18 @@
             this.C = new System.Windows.Forms.Button();
             this.B = new System.Windows.Forms.Button();
             this.A = new System.Windows.Forms.Button();
-            this.Regresar = new System.Windows.Forms.Button();
-            this.Salir = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.traductorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.abecedarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lOGINToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Z
             // 
-            this.Z.BackgroundImage = global::TraductorSistema.Properties.Resources.Z;
+            this.Z.BackgroundImage = global::SignsTranslator.Properties.Resources.Z;
             this.Z.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Z.Location = new System.Drawing.Point(1239, 440);
             this.Z.Name = "Z";
@@ -74,7 +79,7 @@
             // Y
             // 
             this.Y.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Y.BackgroundImage = global::TraductorSistema.Properties.Resources.Y;
+            this.Y.BackgroundImage = global::SignsTranslator.Properties.Resources.Y;
             this.Y.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Y.Location = new System.Drawing.Point(1127, 431);
             this.Y.Name = "Y";
@@ -85,7 +90,7 @@
             // 
             // X
             // 
-            this.X.BackgroundImage = global::TraductorSistema.Properties.Resources.X;
+            this.X.BackgroundImage = global::SignsTranslator.Properties.Resources.X;
             this.X.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.X.Location = new System.Drawing.Point(972, 431);
             this.X.Name = "X";
@@ -96,7 +101,7 @@
             // 
             // W
             // 
-            this.W.BackgroundImage = global::TraductorSistema.Properties.Resources.W;
+            this.W.BackgroundImage = global::SignsTranslator.Properties.Resources.W;
             this.W.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.W.Location = new System.Drawing.Point(827, 420);
             this.W.Name = "W";
@@ -107,7 +112,7 @@
             // 
             // V
             // 
-            this.V.BackgroundImage = global::TraductorSistema.Properties.Resources.V;
+            this.V.BackgroundImage = global::SignsTranslator.Properties.Resources.V;
             this.V.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.V.Location = new System.Drawing.Point(671, 431);
             this.V.Name = "V";
@@ -118,7 +123,7 @@
             // 
             // U
             // 
-            this.U.BackgroundImage = global::TraductorSistema.Properties.Resources.M;
+            this.U.BackgroundImage = global::SignsTranslator.Properties.Resources.M;
             this.U.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.U.Location = new System.Drawing.Point(481, 304);
             this.U.Name = "U";
@@ -129,7 +134,7 @@
             // 
             // T
             // 
-            this.T.BackgroundImage = global::TraductorSistema.Properties.Resources.T;
+            this.T.BackgroundImage = global::SignsTranslator.Properties.Resources.T;
             this.T.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.T.Location = new System.Drawing.Point(374, 439);
             this.T.Name = "T";
@@ -140,7 +145,7 @@
             // 
             // S
             // 
-            this.S.BackgroundImage = global::TraductorSistema.Properties.Resources.S;
+            this.S.BackgroundImage = global::SignsTranslator.Properties.Resources.S;
             this.S.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.S.Location = new System.Drawing.Point(229, 431);
             this.S.Name = "S";
@@ -151,7 +156,7 @@
             // 
             // R
             // 
-            this.R.BackgroundImage = global::TraductorSistema.Properties.Resources.R;
+            this.R.BackgroundImage = global::SignsTranslator.Properties.Resources.R;
             this.R.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.R.Location = new System.Drawing.Point(71, 439);
             this.R.Name = "R";
@@ -162,7 +167,7 @@
             // 
             // Q
             // 
-            this.Q.BackgroundImage = global::TraductorSistema.Properties.Resources.Q;
+            this.Q.BackgroundImage = global::SignsTranslator.Properties.Resources.Q;
             this.Q.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Q.Location = new System.Drawing.Point(1239, 321);
             this.Q.Name = "Q";
@@ -173,7 +178,7 @@
             // 
             // P
             // 
-            this.P.BackgroundImage = global::TraductorSistema.Properties.Resources.P;
+            this.P.BackgroundImage = global::SignsTranslator.Properties.Resources.P;
             this.P.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.P.Location = new System.Drawing.Point(1085, 304);
             this.P.Name = "P";
@@ -184,7 +189,7 @@
             // 
             // O
             // 
-            this.O.BackgroundImage = global::TraductorSistema.Properties.Resources.O;
+            this.O.BackgroundImage = global::SignsTranslator.Properties.Resources.O;
             this.O.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.O.Location = new System.Drawing.Point(939, 321);
             this.O.Name = "O";
@@ -195,7 +200,7 @@
             // 
             // Ñ
             // 
-            this.Ñ.BackgroundImage = global::TraductorSistema.Properties.Resources.Ñ;
+            this.Ñ.BackgroundImage = global::SignsTranslator.Properties.Resources.Ñ;
             this.Ñ.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Ñ.Location = new System.Drawing.Point(795, 304);
             this.Ñ.Name = "Ñ";
@@ -206,7 +211,7 @@
             // 
             // N
             // 
-            this.N.BackgroundImage = global::TraductorSistema.Properties.Resources.N;
+            this.N.BackgroundImage = global::SignsTranslator.Properties.Resources.N;
             this.N.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.N.Location = new System.Drawing.Point(633, 315);
             this.N.Name = "N";
@@ -217,7 +222,7 @@
             // 
             // M
             // 
-            this.M.BackgroundImage = global::TraductorSistema.Properties.Resources.U;
+            this.M.BackgroundImage = global::SignsTranslator.Properties.Resources.U;
             this.M.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.M.Location = new System.Drawing.Point(519, 420);
             this.M.Name = "M";
@@ -228,7 +233,7 @@
             // 
             // L
             // 
-            this.L.BackgroundImage = global::TraductorSistema.Properties.Resources.L;
+            this.L.BackgroundImage = global::SignsTranslator.Properties.Resources.L;
             this.L.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.L.Location = new System.Drawing.Point(343, 321);
             this.L.Name = "L";
@@ -239,7 +244,7 @@
             // 
             // K
             // 
-            this.K.BackgroundImage = global::TraductorSistema.Properties.Resources.K;
+            this.K.BackgroundImage = global::SignsTranslator.Properties.Resources.K;
             this.K.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.K.Location = new System.Drawing.Point(196, 304);
             this.K.Name = "K";
@@ -250,7 +255,7 @@
             // 
             // J
             // 
-            this.J.BackgroundImage = global::TraductorSistema.Properties.Resources.J;
+            this.J.BackgroundImage = global::SignsTranslator.Properties.Resources.J;
             this.J.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.J.Location = new System.Drawing.Point(40, 321);
             this.J.Name = "J";
@@ -261,7 +266,7 @@
             // 
             // I
             // 
-            this.I.BackgroundImage = global::TraductorSistema.Properties.Resources.I;
+            this.I.BackgroundImage = global::SignsTranslator.Properties.Resources.I;
             this.I.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.I.Location = new System.Drawing.Point(1219, 193);
             this.I.Name = "I";
@@ -272,7 +277,7 @@
             // 
             // H
             // 
-            this.H.BackgroundImage = global::TraductorSistema.Properties.Resources.H;
+            this.H.BackgroundImage = global::SignsTranslator.Properties.Resources.H;
             this.H.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.H.Location = new System.Drawing.Point(1072, 183);
             this.H.Name = "H";
@@ -283,7 +288,7 @@
             // 
             // G
             // 
-            this.G.BackgroundImage = global::TraductorSistema.Properties.Resources.G;
+            this.G.BackgroundImage = global::SignsTranslator.Properties.Resources.G;
             this.G.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.G.Location = new System.Drawing.Point(925, 200);
             this.G.Name = "G";
@@ -294,7 +299,7 @@
             // 
             // F
             // 
-            this.F.BackgroundImage = global::TraductorSistema.Properties.Resources.F;
+            this.F.BackgroundImage = global::SignsTranslator.Properties.Resources.F;
             this.F.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.F.Location = new System.Drawing.Point(772, 193);
             this.F.Name = "F";
@@ -305,7 +310,7 @@
             // 
             // E
             // 
-            this.E.BackgroundImage = global::TraductorSistema.Properties.Resources.E;
+            this.E.BackgroundImage = global::SignsTranslator.Properties.Resources.E;
             this.E.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.E.Location = new System.Drawing.Point(618, 200);
             this.E.Name = "E";
@@ -316,7 +321,7 @@
             // 
             // D
             // 
-            this.D.BackgroundImage = global::TraductorSistema.Properties.Resources.D;
+            this.D.BackgroundImage = global::SignsTranslator.Properties.Resources.D;
             this.D.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.D.Location = new System.Drawing.Point(469, 183);
             this.D.Name = "D";
@@ -327,7 +332,7 @@
             // 
             // C
             // 
-            this.C.BackgroundImage = global::TraductorSistema.Properties.Resources.C;
+            this.C.BackgroundImage = global::SignsTranslator.Properties.Resources.C;
             this.C.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.C.Location = new System.Drawing.Point(314, 200);
             this.C.Name = "C";
@@ -358,27 +363,70 @@
             this.A.UseVisualStyleBackColor = true;
             this.A.Click += new System.EventHandler(this.A_Click);
             // 
-            // Regresar
+            // menuStrip1
             // 
-            this.Regresar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Regresar.BackgroundImage")));
-            this.Regresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Regresar.Location = new System.Drawing.Point(972, 566);
-            this.Regresar.Name = "Regresar";
-            this.Regresar.Size = new System.Drawing.Size(167, 48);
-            this.Regresar.TabIndex = 56;
-            this.Regresar.UseVisualStyleBackColor = true;
-            this.Regresar.Click += new System.EventHandler(this.Regresar_Click);
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(210)))), ((int)(((byte)(231)))));
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.inicioToolStripMenuItem,
+            this.traductorToolStripMenuItem,
+            this.abecedarioToolStripMenuItem,
+            this.salirToolStripMenuItem,
+            this.lOGINToolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1354, 35);
+            this.menuStrip1.TabIndex = 56;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // Salir
+            // inicioToolStripMenuItem
             // 
-            this.Salir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Salir.BackgroundImage")));
-            this.Salir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Salir.Location = new System.Drawing.Point(1178, 566);
-            this.Salir.Name = "Salir";
-            this.Salir.Size = new System.Drawing.Size(103, 48);
-            this.Salir.TabIndex = 57;
-            this.Salir.UseVisualStyleBackColor = true;
-            this.Salir.Click += new System.EventHandler(this.Salir_Click);
+            this.inicioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(228)))), ((int)(((byte)(204)))));
+            this.inicioToolStripMenuItem.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
+            this.inicioToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(74, 31);
+            this.inicioToolStripMenuItem.Text = "Inicio";
+            this.inicioToolStripMenuItem.Click += new System.EventHandler(this.inicioToolStripMenuItem_Click_2);
+            // 
+            // traductorToolStripMenuItem
+            // 
+            this.traductorToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(228)))), ((int)(((byte)(204)))));
+            this.traductorToolStripMenuItem.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.traductorToolStripMenuItem.Name = "traductorToolStripMenuItem";
+            this.traductorToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2;
+            this.traductorToolStripMenuItem.Size = new System.Drawing.Size(115, 31);
+            this.traductorToolStripMenuItem.Text = "Traductor";
+            this.traductorToolStripMenuItem.Click += new System.EventHandler(this.traductorToolStripMenuItem_Click_2);
+            // 
+            // abecedarioToolStripMenuItem
+            // 
+            this.abecedarioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(228)))), ((int)(((byte)(204)))));
+            this.abecedarioToolStripMenuItem.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abecedarioToolStripMenuItem.Name = "abecedarioToolStripMenuItem";
+            this.abecedarioToolStripMenuItem.Size = new System.Drawing.Size(124, 31);
+            this.abecedarioToolStripMenuItem.Text = "Abecedario";
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.salirToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(228)))), ((int)(((byte)(204)))));
+            this.salirToolStripMenuItem.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F6;
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(173, 31);
+            this.salirToolStripMenuItem.Text = "Cerrar aplicación";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
+            // lOGINToolStripMenuItem1
+            // 
+            this.lOGINToolStripMenuItem1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.lOGINToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(228)))), ((int)(((byte)(204)))));
+            this.lOGINToolStripMenuItem1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lOGINToolStripMenuItem1.Name = "lOGINToolStripMenuItem1";
+            this.lOGINToolStripMenuItem1.ShortcutKeys = System.Windows.Forms.Keys.F4;
+            this.lOGINToolStripMenuItem1.Size = new System.Drawing.Size(151, 31);
+            this.lOGINToolStripMenuItem1.Text = "Administrador";
+            this.lOGINToolStripMenuItem1.Click += new System.EventHandler(this.lOGINToolStripMenuItem1_Click_1);
             // 
             // Abecedario
             // 
@@ -386,9 +434,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
-            this.Controls.Add(this.Salir);
-            this.Controls.Add(this.Regresar);
+            this.ClientSize = new System.Drawing.Size(1354, 733);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.Z);
             this.Controls.Add(this.Y);
             this.Controls.Add(this.X);
@@ -419,9 +466,13 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Abecedario";
-            this.Text = "Abecedario";
+            this.Text = "Signs Translator";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Abecedario_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -454,7 +505,11 @@
         internal System.Windows.Forms.Button C;
         internal System.Windows.Forms.Button B;
         internal System.Windows.Forms.Button A;
-        internal System.Windows.Forms.Button Regresar;
-        internal System.Windows.Forms.Button Salir;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem traductorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem abecedarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lOGINToolStripMenuItem1;
     }
 }
