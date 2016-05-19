@@ -38,7 +38,7 @@
             // 
             this.Regresar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Regresar.BackgroundImage")));
             this.Regresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Regresar.Location = new System.Drawing.Point(1019, 558);
+            this.Regresar.Location = new System.Drawing.Point(1013, 538);
             this.Regresar.Name = "Regresar";
             this.Regresar.Size = new System.Drawing.Size(171, 46);
             this.Regresar.TabIndex = 3;
@@ -48,26 +48,27 @@
             // PictureBox1
             // 
             this.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PictureBox1.Location = new System.Drawing.Point(391, 199);
+            this.PictureBox1.Location = new System.Drawing.Point(383, 187);
             this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(606, 348);
-            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox1.Size = new System.Drawing.Size(614, 360);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureBox1.TabIndex = 4;
             this.PictureBox1.TabStop = false;
+            this.PictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
             // Abecedario_Resultado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.PictureBox1);
             this.Controls.Add(this.Regresar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Abecedario_Resultado";
-            this.Text = "Abecedario_Resultado";
+            this.Text = "Signs Translator";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Abecedario_Resultado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
