@@ -38,9 +38,16 @@ namespace TraductorSistema
 
         public void asignarLetra(char var)
         {
-            string qry = "select RUTA from Señas where descripcion='"+ var + "' and Tipo=1";
+            /*var filePath= @"C:\SignsTranslator\TraductorSistema\TraductorSistema\Resources\abecedario\" + var + ".jpg";
+            
+                    Abecedario_Resultado FrmObjR = new Abecedario_Resultado();
+                    FrmObjR.PictureBox1.Image = Image.FromFile(filePath);
+                    FrmObjR.Show();*/
+
+           
             try
             {
+                string qry = "select ruta from Abecedario where nombre='" + var + "'";
                 // Inicializa el objeto SqlCommand
                 SqlCommand SqlCom = new SqlCommand(qry, con);
 
@@ -55,23 +62,27 @@ namespace TraductorSistema
                     string text;
 
                     text = rdr.GetString(0);
-
-
+                    string currentDir = Environment.CurrentDirectory;
+                    DirectoryInfo directorio = new DirectoryInfo(
+                        Path.GetFullPath(Path.Combine(currentDir, @"..\..\" + text)));
                     Abecedario_Resultado FrmObjR = new Abecedario_Resultado();
-                    FrmObjR.PictureBox1.Image = Image.FromFile(rdr.GetString(0));
-                    FrmObjR.ShowDialog();
+                    FrmObjR.PictureBox1.Image = Image.FromFile(directorio.ToString());
+                    FrmObjR.Show();
+                    
 
                     text = string.Empty;
+
 
                 }
                 else
                 {
-                    MessageBox.Show("No existe registro con la " + var, "Búsqueda Abecedario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("No existe la letra " + var, "Búsqueda palabras", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("No se encontro la base de datos para abecedario","Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+               
             }
             finally
             {
@@ -79,17 +90,20 @@ namespace TraductorSistema
                 if (con.State == ConnectionState.Open)
                     con.Close();
             }
+                  
         }
         private void A_Click(object sender, EventArgs e)
         {
-           char var='A';
+            char var = 'a';
             asignarLetra(var);
+
         }
 
         private void B_Click(object sender, EventArgs e)
         {
             char var = 'B';
             asignarLetra(var);
+            
         }
 
         private void P_Click(object sender, EventArgs e)
@@ -242,14 +256,82 @@ namespace TraductorSistema
             asignarLetra(var);
         }
 
-        private void Regresar_Click(object sender, EventArgs e)
+       /* private void Regresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }*/
+
+        /*private void Salir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }*/
+
+        private void Abecedario_Load(object sender, EventArgs e)
+        {
+            abecedarioToolStripMenuItem.Enabled = false;
+
+           
+
+        }
+
+       /* private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }*/
+
+      /*  private void traductorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SignsTranslator.Palabras llamada = new SignsTranslator.Palabras();
+            llamada.Show();
+            this.Close();
+        }*/
+
+       /* private void lOGINToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Login llamada = new Login();
+            llamada.Show();
+            this.Close();
+        }
+        */
+       /* private void traductorToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            SignsTranslator.Palabras llamada = new SignsTranslator.Palabras();
+            llamada.Show();
+            this.Close();
+        }*/
+
+       /* private void inicioToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }*/
+
+        private void fileSystemWatcher1_Changed(object sender, FileSystemEventArgs e)
+        {
+
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void inicioToolStripMenuItem_Click_2(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void Salir_Click(object sender, EventArgs e)
+        private void traductorToolStripMenuItem_Click_2(object sender, EventArgs e)
         {
-            Application.Exit();
+            SignsTranslator.Palabras llamada = new SignsTranslator.Palabras();
+            llamada.Show();
+            this.Close();
+        }
+
+        private void lOGINToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            Login llamada = new Login();
+            llamada.Show();
+            this.Close();
         }  
     }
 

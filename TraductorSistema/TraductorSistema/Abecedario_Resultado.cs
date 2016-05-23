@@ -25,13 +25,18 @@ namespace TraductorSistema
 
         private void Abecedario_Resultado_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Regresar_Click(object sender, EventArgs e)
         {
             this.Close();
 
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
